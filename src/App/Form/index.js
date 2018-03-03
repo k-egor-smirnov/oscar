@@ -8,22 +8,7 @@ import './index.css'
 import Option from './Option'
 import HeroRace from './HeroRace'
 import HeroGender from './HeroGender'
-
-const ReadyButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  background: #4da2ff;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  margin: 32px 32px 0px 32px;
-  padding: 16px;
-  border-radius: 4px;
-  width: calc(100% - 64px);
-`
+import { ColoredButton as ReadyButton } from '../common/styled'
 
 function mapStateToProps (state) {
   return {
@@ -75,7 +60,7 @@ class Form extends Component {
         </div>
         
           <Link style={{ textDecoration: 'none', color: '#fff' }} to="/result">
-            <ReadyButton onClick={() => this.getResult()}>
+            <ReadyButton>
                   готов к оскару
             </ReadyButton>
           </Link>
