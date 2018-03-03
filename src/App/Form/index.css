@@ -1,14 +1,10 @@
 .form {
   display: inline-flex;
   flex-flow: column nowrap;
-  position: absolute;
-  background: #fff;
   color: black;
   border-radius: 16px;
   width: 600px;
   height: 600px;
-  top: 164px;
-  margin: auto;
   box-shadow: 0px 30px 60px 0px rgba(0,0,0,0.3);
 }
 

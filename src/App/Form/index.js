@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import './index.css'
 import Option from './Option'
@@ -18,11 +19,10 @@ const ReadyButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  margin-top: 32px;
+  margin: 32px 32px 0px 32px;
   padding: 16px;
   border-radius: 4px;
-  margin-left: 32px;
-  margin-right: 32px;
+  width: calc(100% - 64px);
 `
 
 function mapStateToProps (state) {
@@ -73,10 +73,12 @@ class Form extends Component {
             <Option title="Мюзикл" emoji="ap-speaker"/>
           </div>
         </div>
-
-        <ReadyButton>
-          готов к оскару
-        </ReadyButton>
+        
+          <Link style={{ textDecoration: 'none', color: '#fff' }} to="/result">
+            <ReadyButton onClick={() => this.getResult()}>
+                  готов к оскару
+            </ReadyButton>
+          </Link>
       </div>
     );
   }

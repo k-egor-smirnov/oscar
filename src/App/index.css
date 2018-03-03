@@ -12,12 +12,20 @@
 
 .App {
   display: flex;
-  justify-content: center;
-  margin-left: 64px;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative; 
+}
+
+.content {
+  display: inline-block;
+  background: #fff;
+  border-radius: 16px;
 }
 
 .out {
   display: flex;
+  align-items: center;
   flex-flow: column nowrap;
   margin-top: 16px;
   padding-bottom: 16px;
