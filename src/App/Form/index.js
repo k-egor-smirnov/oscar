@@ -59,7 +59,10 @@ class Form extends Component {
           </div>
         </div>
         
-          <Link style={{ textDecoration: 'none', color: '#fff' }} to="/result">
+          <Link style={{ textDecoration: 'none', color: '#fff' }} to={{
+            pathname: '/result',
+            state: {data: 123}
+          }}>
             <ReadyButton>
                   готов к оскару
             </ReadyButton>

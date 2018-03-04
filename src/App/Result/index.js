@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Loading from './Loading'
 import Share from './Share'
 import { ColoredButton } from '../common/styled.js'
+import Crazy from './crazy.png'
 
 const ContentWrapper = styled.div`
     display: block;
@@ -45,6 +46,10 @@ const Error = styled.div`
     font-size: 16px;
 `
 
+const ErrorText = styled.span`
+    margin-top: 64px;
+`
+
 const ReturnButton = ColoredButton.extend`
     position: absolute;
     
@@ -57,17 +62,18 @@ class Result extends Component {
         super(props)
 
         this.state = {
-            image: null
+            image: null,
+            data: this.props.location.state.data
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         fetch('http://51.15.201.238/get')
             .then(response=> {
                 return response.blob()
             })
-            .then(image => {
-                this.setState({ image: URL.createObjectURL(image) })
+            .then(blob => {
+                this.setState({ image: URL.createObjectURL(blob) })
             })
     }
 
@@ -75,12 +81,10 @@ class Result extends Component {
         if (!this.state.data) {
             return (
                 <ContentWrapper>
+                    <pre>{this.state.data}</pre>
                     <Error>
-                        <div>
-                            <i className="ap ap-scream"></i>
-                            <span>Упс, что-то пошло не так!</span>
-                            <i className="ap ap-scream"></i>
-                        </div>
+                        <img src={Crazy} />
+                        <ErrorText>Упс, что-то пошло не так! Попробуйте еще раз</ErrorText>
 
                         <Link to="/">
                             <ReturnButton>
@@ -103,6 +107,10 @@ class Result extends Component {
             </ContentWrapper>
         )
     }
+}
+
+Result.propTypes = {
+    location: Object
 }
 
 export default Result
