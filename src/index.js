@@ -9,7 +9,7 @@ import App from './App/';
 import registerServiceWorker from './registerServiceWorker';
 import app from './App/store/reducers'
 
-let store = createStore(
+const store = createStore(
   app,
   applyMiddleware(logger)
 )
@@ -20,4 +20,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
 registerServiceWorker();

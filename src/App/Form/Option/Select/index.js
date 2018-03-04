@@ -33,9 +33,13 @@ class Select extends Component {
   }
 
   setSelected(id) {
+    const item = this.props.items[id]
+
     this.setState({
       selectedItem: this.props.items[id]
     })
+
+    this.props.onSelect(item)
   }
 
   render() {
@@ -54,7 +58,8 @@ class Select extends Component {
 
 Select.propTypes = {
   items: type.array,
-  checked: type.bool.isRequired
+  checked: type.bool.isRequired,
+  onSelect: type.func
 }
 
 export default Select

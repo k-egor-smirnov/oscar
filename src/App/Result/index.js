@@ -68,12 +68,15 @@ class Result extends Component {
     }
 
     componentDidMount() {
-        fetch('http://51.15.201.238/get')
+        fetch(`http://localhost:3000/get?${this.state.data}`)
             .then(response=> {
                 return response.blob()
             })
             .then(blob => {
                 this.setState({ image: URL.createObjectURL(blob) })
+            })
+            .catch(() => {
+                this.setState({ data: false})
             })
     }
 

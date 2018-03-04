@@ -22,13 +22,12 @@ const ShareText = styled.span`
 const Buttons = styled.div`
     display: flex;
     justify-content: center;
-    
-    margin-top: 8px;
 `
 
 const CommonButton = styled.div`
     display: flex;
     margin: 8px;
+    cursor: pointer;
 `
 
 const HorizontalSplit = styled.span`
@@ -47,9 +46,9 @@ const SocialTitle = styled.span`
     font-weight: 500;    
 `
 
-const SocialImage = styled.img`
-    width: 32px;
-    height: 32px;
+const SocialImage = styled.i`
+    width: 64px;
+    height: 64px;
 `
 
 class Share extends Component {
@@ -63,7 +62,7 @@ class Share extends Component {
                 <Buttons>
                     <CommonButton>
                         <VKontakteButton className="social" element="span" title="Я получил Оскар!">
-                            <SocialImage src={VK}/>
+                        <SocialImage className="fab fa-lg fa-vk"/>
                             <SocialTitle>ВКонтакте</SocialTitle>
                         </VKontakteButton>
 
@@ -74,7 +73,7 @@ class Share extends Component {
 
                     <CommonButton>
                         <TwitterButton className="social" element="span" title="Я получил Оскар!">
-                            <SocialImage src={Twitter}/>
+                        <SocialImage className="fab fa-lg fa-twitter"/>
                             <SocialTitle>Twitter</SocialTitle>                            
                         </TwitterButton>
                     </CommonButton>
@@ -83,7 +82,7 @@ class Share extends Component {
 
                     <CommonButton>
                         <FacebookButton className="social" element="span" title="Я получил Оскар!">
-                            <SocialImage src={Facebook}/>
+                            <SocialImage className="fab fa-lg fa-facebook"/>
                             <SocialTitle>Facebook</SocialTitle>                            
                         </FacebookButton>
                     </CommonButton>
