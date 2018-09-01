@@ -4,23 +4,25 @@
 
 .out__text {
   color: #fff;
-  font-size: 54px;
-  line-height: 66px;
+  font-size: 32px;
+  line-height: 36px;
   fill: #fff;
   font-weight: bolder;
+  text-align: center;
 }
 
 .App {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  position: relative; 
+  position: relative;
 }
 
 .content {
   display: inline-block;
   background: #fff;
-  border-radius: 16px;
+  border-radius: 16px 16px 0 0;
+  width: 100%;
 }
 
 .out {
@@ -30,4 +32,16 @@
   margin-top: 16px;
   padding-bottom: 16px;
   line-height: 72px;
+}
+
+@media (min-width: 600px) {
+  .content {
+    width: 600px;
+    border-radius: 16px;
+  }
+
+  .out__text {
+    font-size: 54px;
+    line-height: 66px;
+  }
 }
