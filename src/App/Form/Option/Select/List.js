@@ -4,7 +4,7 @@ import type from "prop-types";
 
 const Wrapper = styled.ul`
   position: absolute;
-  top: 55px;
+  top: 32px;
   width: 250px;
   list-style-type: none;
   padding: 8px 8px 8px 0;

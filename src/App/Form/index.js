@@ -133,7 +133,7 @@ class Form extends Component {
         <Link
           style={{ textDecoration: "none", color: "#fff" }}
           to={{
-            pathname: "/result",
+            pathname: "/oscar/result",
             state: { data: qs.stringify(this.state) }
           }}
         >

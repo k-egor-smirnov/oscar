@@ -16,8 +16,8 @@ class App extends Component {
           </div>
 
           <div className="content">
-            <Route path="/" exact component={Form}></Route>
-            <Route path="/result" component={Result}></Route>
+            <Route path="/oscar" exact component={Form}></Route>
+            <Route path="/oscar/result" component={Result}></Route>
           </div>
           {/* <img className="oscar-image" src={oscar} alt="oscar"/> */}
         </div>

@@ -2,6 +2,7 @@
   "name": "oscar-form",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://esmirnov.xyz/oscar",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
