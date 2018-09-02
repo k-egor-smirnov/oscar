@@ -71,7 +71,7 @@ class Result extends Component {
 
   componentDidMount() {
     if (!this.props.location.state) {
-      this.props.history.push("/");
+      this.props.history.push("/oscar");
     }
 
     const imageURL = `http://esmirnov.xyz/oscar/api/get?${this.state.data}`;

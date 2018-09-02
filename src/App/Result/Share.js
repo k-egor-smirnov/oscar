@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { VKontakteButton, FacebookButton, TwitterButton } from "react-social";
 import styled from "styled-components";
 
-import propTypes from 'prop-types';
+import propTypes from "prop-types";
 import VK from "./svg/vk.svg";
 import Facebook from "./svg/facebook.svg";
 import Twitter from "./svg/twitter.svg";
@@ -69,7 +69,11 @@ class Share extends Component {
         <ShareText>Поделись с друзьями!</ShareText>
 
         <Buttons>
-          <CommonButton onClick={() => window.open(this.ConstructVKLink(), '', 'height=570,width=650')}>
+          <CommonButton
+            onClick={() =>
+              window.open(this.ConstructVKLink(), "", "height=570,width=650")
+            }
+          >
             <SocialImage className="fab fa-lg fa-vk" />
             <SocialTitle>ВКонтакте</SocialTitle>
           </CommonButton>
@@ -107,6 +111,6 @@ class Share extends Component {
 
 Share.propTypes = {
   imageURL: propTypes.URL
-}
+};
 
 export default Share;
